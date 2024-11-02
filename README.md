@@ -24,3 +24,6 @@ npm i -D prisma
 Inicializar Prisma
 npx prisma init
 
+Ejecutar migraciones
+npx prisma migrate dev
+
