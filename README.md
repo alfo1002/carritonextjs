@@ -27,3 +27,9 @@ npx prisma init
 Ejecutar migraciones
 npx prisma migrate dev
 
+Ejecutar Prisma studio
+npx prisma studio
+
+Ejecutar typescript desde CLI(en desarrollo)
+npm i -D ts-node
+
