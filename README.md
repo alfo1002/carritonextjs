@@ -36,3 +36,6 @@ npm i -D ts-node
 Instalando Zustand para manejo de estados en el cliente
 npm i zustand
 
+Instalando hero icons
+npm i @heroicons/react
+
