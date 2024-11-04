@@ -33,3 +33,6 @@ npx prisma studio
 Ejecutar typescript desde CLI(en desarrollo)
 npm i -D ts-node
 
+Instalando Zustand para manejo de estados en el cliente
+npm i zustand
+
