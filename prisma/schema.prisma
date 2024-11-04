@@ -28,3 +28,11 @@ model Product {
   categoryId Int
   category   Category @relation(fields: [categoryId], references: [id])
 }
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  name     String
+  role     String
+}
