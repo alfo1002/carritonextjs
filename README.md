@@ -39,3 +39,8 @@ npm i zustand
 Instalando hero icons
 npm i @heroicons/react
 
+Instalando Zod para validaciones
+npm i zod
+
+Instalando Toastify
+npm i react-toastify
