@@ -3,11 +3,18 @@ import { useStore } from "@/src/store"
 import ProductDetails from "./ProductDetails"
 import { useMemo } from "react"
 import { formatCurrency } from "@/src/utils"
+import { createOrder } from "@/actions/create-order-action"
 
 export default function OrderSummary() {
 
     const order = useStore((state) => state.order)
     const total = useMemo(() => order.reduce((total, item) => total + (item.quantity * item.price), 0), [order])
+
+    const handleCreateOrder = () => {
+        console.log('Creando orden')
+        createOrder()
+    }
+
 
     return (
         <aside className="lg:h-screen lg:overflow-y-scroll md:w-64 lg:w-96 p-5">
@@ -27,6 +34,17 @@ export default function OrderSummary() {
                             Total a pagar: {''}
                             <span className="font-bold">{formatCurrency(total)}</span>
                         </p>
+
+                        <form
+                            className="mt-10 w-full space-y-5"
+                            action={handleCreateOrder}
+                        >
+                            <input
+                                type="submit"
+                                className="py-2 rounded uppercase text-white bg-black w-full text-center font-bold cursor-pointer"
+                                value="Confirmar Pedido" />
+                        </form>
+
                     </div>
                 )
             }
