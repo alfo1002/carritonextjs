@@ -4,11 +4,14 @@ import ProductForm from "./ProductForm";
 import { ProductSchema } from "@/src/schema";
 import { toast } from "react-toastify";
 import { createProduct } from "@/actions/create-product-action";
-import { useRouter } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
+import { updateProduct } from "@/actions/update-product-action";
 
 export default function EditProductForm({ children }: { children: React.ReactNode }) {
 
     const router = useRouter()
+    const params = useParams()
+    const id = +params.id!
 
     const handleSubmit = async (formData: FormData) => {
         const data = {
@@ -24,14 +27,14 @@ export default function EditProductForm({ children }: { children: React.ReactNod
             })
             return
         }
-        const response = await createProduct(result.data)
+        const response = await updateProduct(result.data, id)
         if (response?.errors) {
             response.errors.forEach(error => {
                 toast.error(error.message)
             })
             return
         }
-        toast.success("Producto Creado")
+        toast.success("Producto Actualizado")
         router.push("/admin/products")
     }
 
