@@ -44,3 +44,8 @@ npm i zod
 
 Instalando Toastify
 npm i react-toastify
+
+Dependencia Cloudinary
+npm i next-cloudinary
+
+npm i react-icons
