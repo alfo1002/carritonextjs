@@ -41,7 +41,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: { p
 
             <div className="flex flex-col lg:flex-row lg:justify-between gap-5">
                 <Link
-                    href={'admin/products/new'}
+                    href={'products/new'}
                     className="bg-amber-400 w-full lg:w-auto text-xl px-10 py-3 text-center font-bold cursor-pointer"
                 >
                     Crear Producto
