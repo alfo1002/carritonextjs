@@ -49,3 +49,6 @@ Dependencia Cloudinary
 npm i next-cloudinary
 
 npm i react-icons
+
+# DEPENDENCIA SWR para consultas online
+npm i swr
